@@ -1,7 +1,12 @@
 #ifndef _DB_HW3
 #define _DB_HW3
 
+#include <string>
+
 #include "person.hpp"
+
+using namespace std;
+
 class Db{
 public:
   Db( const string);

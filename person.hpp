@@ -3,10 +3,15 @@
 
 class Person{
 public:
-
+	Person( int, char*, short int );
+	
+	int getID();
+	char* getName();
+	short int getAge();
+	
 private:
   int ID;
-  char[25] name;
+  char name[25];
   short int age;
 };
 
