@@ -70,12 +70,8 @@ void printMenu()
 			cout << endl << "Enter the new name(max 25 chars): ";
 			/*error checking*/
 			
-			{
-			string temps;
-			cin >> temps;
+			cin >> tempName;
 			                         
-			}
-			
 			cout << endl << "Enter the NEW age: ";
 			/*error checking*/
 			while(!(cin >> num) || cin.peek() != '\n' || num < 18 || num > 120)
