@@ -5,9 +5,27 @@
 #include <iostream>
 #include <fstream>
 
-#include "person.hpp"
 
 using namespace std;
+
+class Person{
+public:
+	Person( int, string, short int );
+	Person();
+	
+	int getID();
+	string getName();
+	short int getAge();
+	
+	friend istream& operator>>( istream& ins,  Person& obj );
+	friend ostream& operator<<( ostream& outs, Person obj );
+	
+private:
+  int ID;
+  string name;
+  short int age;
+};
+
 
 class Db{
 public:

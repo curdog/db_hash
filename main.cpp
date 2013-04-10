@@ -4,7 +4,7 @@
 #include <string>
 #include <sstream>
 
-#include "person.hpp"
+
 #include "db.hpp"
 
 /*function that displays a formatted function*/
@@ -34,7 +34,7 @@ void printMenu()
 	int num;
 	int tempAge;
 	
-	int input,value;
+	int input;
 	do{
 		cout << "Database Simulation" << endl;
 		cout << "Menu Options" << endl;
@@ -59,7 +59,7 @@ void printMenu()
 		{
 			cout << endl << "Enter the new ID number: ";
 			/*error checking*/
-			while(!(cin >> num) || cin.peek() != '\n' || num < 0 || num > 9999)
+			while(!(cin >> num) || cin.peek() != '\n' || num <= 0 || num >= 9999)
 			{
 				cout << endl << "Enter a positive ID number, no longer than four digits: ";
 				cin.clear();
@@ -73,7 +73,7 @@ void printMenu()
 			{
 			string temps;
 			cin >> temps;
-			strncpy(tempName, temps.c_str(), 24 );                         
+			                         
 			}
 			
 			cout << endl << "Enter the NEW age: ";
@@ -101,7 +101,7 @@ void printMenu()
 				cin.ignore(30000, '\n'); 
 			}
 			cout << test.find(num);
-			test.rm( test.find(value) );
+			test.rm( test.find(num) );
 			cout<<"The record was deleted."<< endl;
 		}
 		
